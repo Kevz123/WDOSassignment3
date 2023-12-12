@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" sizes="180x180" href="manifest1.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="manifest1.json">
+    <link rel="icon" type="image/png" sizes="16x16" href="manifest1.json">
+    <link rel="icon" href="manifest1.json">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="theme-color" content="#eb932b">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel website">
+    <title>Frankfurt Hotels Sri Lanka</title>
+    <link rel="stylesheet" href="frankfurthotels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <section class="header-bookings">
+        <nav>
+            <a href="Bookingspage.html"><img src="images/hotellogo.png" alt="hotel logo"></a>
+            <div class="nav-links" id="navLinks"> 
+                <img src="images/cross.png" alt="cross button" class="togs" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Branchespage.html">BRANCHES</a></li>
+                    <li><a href="Adventurespage.html">ADVENTURES</a></li>
+                    <li><a href="Restaurantspage.html">RESTAURANTS</a></li>
+                    <li>
+                        <a href="">EVENTS ▼</a>
+                    
+                        <ul class="dropdown">
+                            <li><a href="Event1.html">Weddings</a></li>
+                            <li><a href="Event2.html">Meetings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Bookingspage.html">BOOKINGS</a></li>
+                </ul>
+            </div>
+            <img src="images/menu.png" alt="menu button" class="togs" onclick="showMenu()">
+        </nav>
+    </section>
+    <br>
+    <form id="bookingform">
+    <section class="text-bookings">
+        <p>Welcome to our hotel's dedicated bookings page! We are delighted to offer you a seamless and user-friendly platform to plan your stay with us, ensuring your visit exceeds all your expectations. Please fill out the below form so we can see how we can assist you.<br>Check out the prices we offer below.</p>
+    </section>
+    <br><br>
+
+    <table class="booktable">
+        <tr>
+            <th>Scenario Details</th>
+            <th>Cost in LKR.</th>
+        </tr>
+        <tr>
+            <td>Single Room</td>
+            <td>Rs.25,000</td>
+        </tr>
+        <tr>
+            <td>Double Room</td>
+            <td>Rs.35,000</td>
+        </tr>
+        <tr>
+            <td>Triple Room</td>
+            <td>Rs.40,000</td>
+        </tr>
+        <tr>
+            <td>Kids above 5 years</td>
+            <td>Rs.5000 extra for meals</td>
+        </tr>
+        <tr>
+            <td>If extra bed required</td>
+            <td>Rs.8000</td>
+        </tr>
+    </table>
+
+
+    <fieldset>
+        <legend>Personal Details</legend>
+        <p>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" maxlength="20" size="15" required>
+        </p>
+        <p>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" maxlength="20" size="15" required>
+        </p>
+            
+        <p>
+            <label for="email">Email</label> 
+            <input type="text" id="email" name="email" placeholder="example@example.com" maxlength="30" size="22" required>
+        </p>
+
+        <p>
+            <label for="telephone">Phone Number</label> 
+            <input type="number" id="telephone" name="telephone" placeholder="+94 775087932" required>
+        </p>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Booking Details</legend>
+        <p>
+            <label for="htlsbookings">Hotel</label> 
+            <select id="htlsbookings" name="htlsbookings">
+                <option>None</option>
+                <option>Yala</option>
+                <option>Nuwara Eliya</option>
+                <option>Bentota</option>
+                <option>Galle</option>
+                <option>Negombo</option>
+            </select>
+        </p>
+        <p>
+            <label for="singleroom">No. of Single Rooms</label>
+            <input type="number" name="singleroom" id="singleroom" min="0" max="4" value="0">
+        </p>
+        <p>
+            <label for="doubleroom">No. of Double Rooms</label>
+            <input type="number" name="doubleroom" id="doubleroom" min="0" max="4" value="0">
+        </p>
+        <p>
+            <label for="tripleroom">No. of Triple Rooms</label>
+            <input type="number" name="tripleroom" id="tripleroom" min="0" max="4" value="0">
+        </p>
+
+        <p>
+            <label for="noofadults">No. of Adults</label>
+            <input type="number" name="noofadults" id="noofadults" min="1" max="8" value="1" required>
+        </p>
+        <p>
+            <label for="childbelow">No. of Children below 5</label> 
+            <input type="number" name="childbelow" id="childbelow" min="0" max="8" value="0">
+        </p>
+        <p>
+            <label for="childabove">No. of Children above 5</label> 
+            <input type="number" name="childabove" id="childabove" min="0" max="8" value="0">
+        </p>
+
+        <p>
+            <label for="check-indate">Check-In Date</label>
+            <input type="date" name="check-indate" id="check-indate" required>
+        </p>
+        <p>
+            <label for="check-outdate">Check-Out Date</label> 
+            <input type="date" name="check-outdate" id="check-outdate" required>
+        </p>
+
+        <p>
+            <label for="bed">Extra Bed</label>
+            <input type="number" name="bed" id="bed" min="0" max="5" value="0">
+        </p>
+
+    
+        <p>
+            <label for="add-ons">Add-ons</label>
+            <select id="add-ons" name="add-ons">
+            <option>WiFi + Pool View</option>
+            <option>WiFi + Garden View</option>
+            <option>WiFi + Beach View</option>
+            </select>
+        </p><br>
+
+
+        <p>
+            <div class="outputcontainer">
+                <div class="currentbooking">Current Booking</div>
+                <p id="CurrBoutp"></p>
+            </div>
+        </p><br>
+
+        <p>
+            <div class="outputcontainer">
+                <div class="loyaltypoints">Loyalty Points</div>
+                <p id="Loyaltyoutp"></p>
+            </div>
+        </p><br>
+        <p>
+            <div class="outputcontainer">
+                <div class="overallbooking">Overall Booking</div>
+                <p id="Overalloutp"></p>
+            </div>
+        </p>
+
+        <input type="button" id="checkloyaltybtn" value="Check Loyalty">
+
+        <p>
+            <input type="button" id="bookfavouritebtn" value="Add as favourite">
+        </p>
+        <p>
+            <input type="button" id="bookhotelbtn" value="Book Now">
+        </p>
+
+
+    </fieldset>
+    
+
+
+    <table class="advtable">
+        <tr>
+            <th>Adventures</th>
+            <th>Costs</th>
+        </tr>
+        <tr>
+            <td>Spa</td>
+            <td>Local Adults Rs.5000<br>Local Kids Rs.2000<br>Foreign Adults Rs.10000<br>Foreign Kids Rs.5000</td>
+        </tr>
+        <tr>
+            <td>Diving(1 hr)</td>
+            <td>Local Adults Rs.5000<br>Local Kids Rs.2000<br>Foreign Adults Rs.10000<br>Foreign Kids Rs.5000<br><br>If you need a guide:<br>Adults Rs.1000<br>Kids Rs.500</td>
+        </tr>
+        <tr>
+            <td>Live Music</td>
+            <td>Local Adults Rs.5000<br>Local Kids Rs.2000<br>Foreign Adults Rs.10000<br>Foreign Kids Rs.5000</td>
+        </tr>
+    </table>
+
+
+    <fieldset>
+        <legend>Adventure Details</legend>
+        <p>
+            <label for="advtures">Select Adventure</label> 
+            <select id="advtures" name="advtures">
+                <option>None</option>
+                <option>Spa</option>
+                <option>Diving</option>
+                <option>Live Music</option>
+            </select>
+        </p>
+        <h4>Fill in below details according to your adventure</h4><br>
+        <p>
+            <label for="adultsadv">No. of Residential Adults</label>
+            <input type="number" name="adultadv" id="adultsadv" min="0" max="5" value="0">
+        </p>
+        <p>
+            <label for="nonadultsadv">No. of Non-residential Adults</label>
+            <input type="number" name="adultadv" id="nonadultsadv" min="0" max="5" value="0">
+        </p>
+        <p>
+            <label for="kidsadv">No. of Residential Kids</label>
+            <input type="number" name="adultadv" id="kidsadv" min="0" max="5" value="0">
+        </p>
+        <p>
+            <label for="nonkidsadv">No. of Non-residential Kids</label>
+            <input type="number" name="kidsadv" id="nonkidsadv" min="0" max="5" value="0">
+        </p><br>
+
+        <h3>If you choose diving do you need a guide?</h3>
+        <p>
+            <div class="guides">
+                <label for="adultguide">Adults</label>
+                <input type="checkbox" id="adultguide" name="guideforadultsdiving" value="adultguide">
+
+                <label for="kidsguide">Kids</label>
+                <input type="checkbox" id="kidsguide" name="guideforkidsdiving" value="kidsguide">
+            </div>
+        </p><br>
+
+        <p>
+            <div class="outputcontainer">
+                <div class="curradventureoutput">Current Adventure Booking</div>
+                <p id="currentadvoutp"></p>
+            </div>
+        </p>
+        <p>
+            <div class="outputcontainer">
+                <div class="overadventureoutput">Overall Adventure Booking</div>
+                <p id="overadvoutp"></p>
+            </div>
+        </p><br><br>
+
+        <p>
+            <input type="button" id="advfavouritebtn" value="Add as favourite">
+        </p>
+        <p>
+            <input type="button" id="bookadvbtn" value="Book Adventure">
+        </p><br><br>
+
+        <p>
+            <div class="outputcontainer">
+                <div class="totbilloutput">Total Bill</div>
+                <p id="Totaloutput"></p>
+            </div>
+        </p>
+        <p>
+            <input type="button" id="totalbill" value="Calculate Total Bill">
+        </p><br>
+        <p>
+            <label for="promo">Promo Code</label><br>
+            <input type="text" name="promo" id="promo" placeholder="Enter promo code to recieve 5% discount on total bill">
+        </p><br>
+        <p>
+            <input type="button" id="promobtn" value="Check Promo">
+        </p>
+
+    </fieldset>
+    
+
+    </form>
+    
+    <!--footer-->
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="images/hotellogo.png" alt="Hotel logo">
+        </div>
+        <ul class="footer-right">
+            <li>
+                <ul class="box">
+                    <li><h3>Opening hours</h3></li>
+                    <li>Mon-Sat 8am to 8pm</li>
+                    <li>Sun 8am to 2pm</li>
+                </ul>
+            </li>
+            <li class="details">
+                <ul class="box">
+                    <li><h3>Contact Us</h3></li>
+                    <li>Telephone: +94 11 448 7348</li>
+                    <li>Whatsapp: +94 77 874 3498</li>
+                    <li>Email- reservations@frankfurthotels.com</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="box"></ul>
+            </li>
+        </ul>
+        <div class="socials">
+            <h4>Find us on</h4>
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="Youtube"></a>
+        </div>
+        <!--Reference: Jetwing Hotels. Yala Hotels | Official Site Jetwing Yala | Home of Natta Kota. Available from: https://www.jetwinghotels.com/jetwingyala/wp-content/uploads/sites/32/2018/03/yala-main-desktop.jpg [Accessed: 12th August 2023] -->
+    </footer>
+
+    <!--Javascript for phone version-->
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.left = "0px";
+        }
+
+        function hideMenu() {
+            navLinks.style.left = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

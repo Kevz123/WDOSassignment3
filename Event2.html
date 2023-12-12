@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" sizes="180x180" href="manifest1.json">
+    <link rel="manifest" type="image/png" sizes="32x32" href="manifest1.json">
+    <link rel="manifest" type="image/png" sizes="16x16" href="manifest1.json">
+    <link rel="manifest" href="manifest1.json">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="theme-color" content="#eb932b">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="description" content="Hotel website">
+    <title>Frankfurt Hotels Sri Lanka</title>
+    <link rel="stylesheet" href="frankfurthotels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header-Event2">
+        <nav>
+            <a href="Event2.html"><img src="images/hotellogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img src="images/cross.png" class="togs" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Branchespage.html">BRANCHES</a></li>
+                    <li><a href="Adventurespage.html">ADVENTURES</a></li>
+                    <li><a href="Restaurantspage.html">RESTAURANTS</a></li>
+                    <li>
+                        <a href="">EVENTS ▼</a>
+                        <ul class="dropdown">
+                            <li><a href="Event1.html">Weddings</a></li>
+                            <li><a href="Event2.html">Meetings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Bookingspage.html">BOOKINGS</a></li>
+                </ul>
+            </div>
+            <img src="images/menu.png" class="togs" onclick="showMenu()">
+        </nav>
+        <div class="meettext">
+            <h1>Meetings</h1>
+        </div>
+    </section>
+    <br>
+    <section class="meet-aligns">
+        <div class="ev-meet">
+            <img src="images/aboutmeeting.jpg">
+        </div>
+        <div>
+            <h2>Plan a Meeting</h2>
+            <p>Inform us about your meetings and we can organize it for you! We are <br> just one phone call away from you being a responsible employer in your workplace.</p>
+        </div>
+    </section>
+    <section class="meet-align">
+        <div class="ev-meet">
+            <img src="images/meetingoffers.jpg">
+        </div>
+        <div>
+            <h2>Offers</h2>
+            <p>Frankfurt Hotels can provide you multiple exclusive offers<br> tailored to you, so why choose any other venue?</p>
+        </div>
+    </section>
+    <section class="meet-aligns">
+        <div class="ev-meet">
+            <img src="images/lstmeeting.jpg">
+        </div>
+        <div>
+            <h2>Special Rewards</h2>
+            <p>When hosting meetings with us, you can recieve rewards which<br> can be redeemed and then used in our hotel. </p>
+        </div>
+    </section>
+    <br>
+
+    <!--footer-->
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="images/hotellogo.png">
+        </div>
+        <ul class="footer-right">
+            <li>
+
+                <ul class="box">
+                    <li><h3>Opening hours</h3></li>
+                    <li>Mon-Sat 8am to 8pm</li>
+                    <li>Sun 8am to 2pm</li>
+                </ul>
+            </li>
+            <li class="details">
+                <ul class="box">
+                    <li><h3>Contact Us</h3></li>
+                    <li>Telephone-+94 11 448 7348</li>
+                    <li>Whatsapp-+94 11 874 3498</li>
+                    <li>Email- reservations@frankfurthotels.com</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="box"></ul>
+            </li>
+        </ul>
+        <div class="socials">
+            <h4>Find us on</h4>
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.png"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png"></a>
+        </div>
+
+        <!--Reference: Jetwing Hotels. Conference & Meeting Venues Negomo at Jetwing Beach. Available from: https://www.jetwinghotels.com/jetwingbeach/wp-content/uploads/sites/31/2017/12/beach-meetingsevents-desktop-large.jpg [Accessed: 12th August 2023]
+            Reference: Jetwing Hotels. Meeting Facilities & Event Venues Colombo | Jetwing Colombo Seven. Available from: https://www.jetwinghotels.com/jetwingcolomboseven/wp-content/uploads/sites/4/2019/10/DSC_2741-1920x656.jpg [Accessed: 12th August 2023]
+            Reference: Jetwing Hotels. Hotel with meeting rooms & event spaces. Available from: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTkVftIz5YMSklPWTDzdIbnZ4hRDRw3S7Qvy6XnWgQDxKdK8Jp [Accessed: 12th August 2023]
+            Reference: Jetwing Hotels. Negombo Event & Meeting Venues | Jetwing Sea. Available from: https://www.jetwinghotels.com/jetwingsea/wp-content/uploads/sites/27/2019/07/events-banner-new-1920x656.jpg [Accessed: 12th August 2023] -->
+    </footer>
+
+    <!--Javascript for phone version-->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.left = "0px";
+    }
+
+    function hideMenu() {
+        navLinks.style.left = "-200px";
+    }
+</script>
+
+</body>
+
+</html>
